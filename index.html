@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aeolus Jet — Private Jet Charter & Aircraft Chartering</title>
-  <meta name="description" content="Aeolus Jet offers bespoke private jet charter, aircraft chartering, and luxury aviation solutions from Singapore and beyond. Experience seamless, safe, and exclusive air travel." />
+  <title>Aeolus Jet — Private Jet Charter, Cargo & Aircraft Solutions</title>
+  <meta name="description" content="Aeolus Jet provides private jet charter, commercial air charter, urgent cargo, ACMI leasing, and specialised aviation solutions from Singapore to the world." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
-    /* ---------- CSS Reset & Variables ---------- */
+    /* ============================================================
+       RESET & VARIABLES
+    ============================================================ */
     *,
     *::before,
     *::after {
@@ -19,21 +21,21 @@
     }
 
     :root {
-      --navy: #0b1320;
-      --navy-light: #121c2e;
-      --navy-mid: #1a2740;
+      --navy: #0a111f;
+      --navy-light: #111a2c;
+      --navy-mid: #18233a;
       --gold: #c9a84c;
       --gold-light: #e0c878;
-      --gold-soft: rgba(201, 168, 76, 0.15);
-      --white: #f4f1ea;
-      --white-dim: #b8b2a6;
+      --gold-soft: rgba(201, 168, 76, 0.12);
+      --white: #f5f2eb;
+      --white-dim: #b9b3a7;
       --gray: #6b7280;
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --max-width: 1240px;
-      --radius: 12px;
-      --radius-lg: 20px;
-      --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --radius: 14px;
+      --radius-lg: 22px;
+      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     html {
@@ -45,29 +47,14 @@
       font-family: var(--font-sans);
       background-color: var(--navy);
       color: var(--white);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button, input, textarea, select {
       font: inherit;
       color: inherit;
       border: none;
@@ -75,7 +62,11 @@
       outline: none;
     }
 
-    /* ---------- Utility ---------- */
+    svg { display: block; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
     .container {
       width: 100%;
       max-width: var(--max-width);
@@ -85,9 +76,9 @@
 
     .section-label {
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 12px;
@@ -97,7 +88,7 @@
       font-family: var(--font-serif);
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 600;
-      line-height: 1.15;
+      line-height: 1.12;
       color: var(--white);
       margin-bottom: 16px;
     }
@@ -105,8 +96,8 @@
     .section-subtitle {
       font-size: 1rem;
       color: var(--white-dim);
-      max-width: 560px;
-      line-height: 1.7;
+      max-width: 580px;
+      line-height: 1.75;
     }
 
     .btn {
@@ -116,9 +107,9 @@
       gap: 8px;
       padding: 14px 32px;
       border-radius: 40px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       cursor: pointer;
       transition: var(--transition);
@@ -129,11 +120,10 @@
       background: var(--gold);
       color: var(--navy);
     }
-
     .btn-primary:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 10px 28px rgba(201, 168, 76, 0.28);
     }
 
     .btn-outline {
@@ -141,23 +131,23 @@
       color: var(--gold);
       background: transparent;
     }
-
     .btn-outline:hover {
       background: var(--gold-soft);
       border-color: var(--gold);
     }
 
     .btn-ghost {
-      border: 1px solid rgba(244, 241, 234, 0.2);
+      border: 1px solid rgba(245, 242, 235, 0.2);
       color: var(--white);
     }
-
     .btn-ghost:hover {
-      border-color: rgba(244, 241, 234, 0.5);
-      background: rgba(244, 241, 234, 0.05);
+      border-color: rgba(245, 242, 235, 0.5);
+      background: rgba(245, 242, 235, 0.05);
     }
 
-    /* ---------- Navigation ---------- */
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
     .navbar {
       position: fixed;
       top: 0;
@@ -168,14 +158,12 @@
       transition: var(--transition);
       background: transparent;
     }
-
     .navbar.scrolled {
-      background: rgba(11, 19, 32, 0.95);
-      backdrop-filter: blur(16px);
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      background: rgba(10, 17, 31, 0.96);
+      backdrop-filter: blur(18px);
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.12);
     }
-
     .navbar .container {
       display: flex;
       align-items: center;
@@ -184,62 +172,73 @@
 
     .logo {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--white);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
-
-    .logo span {
-      color: var(--gold);
-    }
+    .logo span { color: var(--gold); }
 
     .nav-links {
       display: flex;
       align-items: center;
       gap: 32px;
     }
-
     .nav-links a {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       color: var(--white-dim);
       transition: var(--transition);
       position: relative;
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -4px;
+      bottom: -5px;
       width: 0;
       height: 1px;
       background: var(--gold);
       transition: var(--transition);
     }
-
-    .nav-links a:hover {
-      color: var(--white);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
 
     .nav-cta {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
+    .nav-cta .btn { padding: 10px 20px; font-size: 0.72rem; }
 
-    .nav-cta .btn {
-      padding: 10px 24px;
+    .nav-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 18px;
+      border-radius: 40px;
       font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .nav-call:hover {
+      background: rgba(201, 168, 76, 0.2);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+    .nav-call svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
     }
 
     .hamburger {
@@ -250,7 +249,6 @@
       padding: 4px;
       z-index: 1001;
     }
-
     .hamburger span {
       width: 26px;
       height: 2px;
@@ -258,20 +256,13 @@
       transition: var(--transition);
       border-radius: 2px;
     }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* ---------- Hero ---------- */
+    /* ============================================================
+       HERO
+    ============================================================ */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -281,59 +272,108 @@
       background: var(--navy);
     }
 
+    /* Self-contained hero background — pure CSS + SVG */
     .hero-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 75% 25%, rgba(201, 168, 76, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 70% at 15% 85%, rgba(30, 55, 95, 0.45) 0%, transparent 70%),
+        linear-gradient(180deg, #0a111f 0%, #0d1626 45%, #0a111f 100%);
     }
 
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.45;
-      filter: saturate(0.7) brightness(0.6);
+    /* Stars */
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 32% 15%, rgba(255,255,255,0.35), transparent),
+        radial-gradient(1px 1px at 48% 8%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 62% 22%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 78% 12%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(1px 1px at 88% 28%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 25% 32%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(1.5px 1.5px at 55% 18%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 70% 35%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 42% 28%, rgba(255,255,255,0.28), transparent),
+        radial-gradient(1px 1px at 8% 42%, rgba(255,255,255,0.22), transparent);
+      pointer-events: none;
     }
 
+    /* Bottom fade into next section */
     .hero-bg::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(11, 19, 32, 0.3) 0%,
-        rgba(11, 19, 32, 0.7) 50%,
-        rgba(11, 19, 32, 1) 100%
+        rgba(10, 17, 31, 0.25) 0%,
+        rgba(10, 17, 31, 0.55) 60%,
+        rgba(10, 17, 31, 0.98) 100%
       );
     }
 
-    .hero .container {
-      position: relative;
-      z-index: 2;
-      padding-top: 120px;
-      padding-bottom: 80px;
+    /* Large stylized jet silhouette */
+    .hero-jet {
+      position: absolute;
+      top: 18%;
+      right: -4%;
+      width: 62%;
+      max-width: 900px;
+      height: auto;
+      color: rgba(201, 168, 76, 0.07);
+      z-index: 1;
+      transform: rotate(-8deg);
+      pointer-events: none;
     }
 
-    .hero-content {
-      max-width: 720px;
+    /* Contrail lines */
+    .hero-trails {
+      position: absolute;
+      top: 30%;
+      right: 20%;
+      width: 55%;
+      height: 2px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.35;
     }
+    .hero-trails span {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.5), transparent);
+      border-radius: 2px;
+    }
+    .hero-trails span:nth-child(1) { top: 0; left: 0; right: 0; }
+    .hero-trails span:nth-child(2) { top: 8px; left: 15%; right: 10%; opacity: 0.6; }
+    .hero-trails span:nth-child(3) { top: 16px; left: 30%; right: 25%; opacity: 0.35; }
+
+    .hero .container {
+      position: relative;
+      z-index: 3;
+      padding-top: 130px;
+      padding-bottom: 80px;
+    }
+    .hero-content { max-width: 740px; }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 40px;
-      background: rgba(201, 168, 76, 0.12);
+      background: rgba(201, 168, 76, 0.1);
       border: 1px solid rgba(201, 168, 76, 0.25);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold-light);
       margin-bottom: 28px;
     }
-
     .hero-badge .dot {
       width: 6px;
       height: 6px;
@@ -341,10 +381,9 @@
       background: var(--gold);
       animation: pulse 2s ease-in-out infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.4); }
+      50% { opacity: 0.4; transform: scale(1.5); }
     }
 
     .hero h1 {
@@ -355,34 +394,30 @@
       color: var(--white);
       margin-bottom: 24px;
     }
-
     .hero h1 em {
       font-style: italic;
       color: var(--gold-light);
     }
-
     .hero p {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: var(--white-dim);
-      max-width: 520px;
+      max-width: 540px;
       line-height: 1.8;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       margin-bottom: 56px;
     }
-
     .hero-stats {
       display: flex;
       gap: 48px;
       padding-top: 32px;
-      border-top: 1px solid rgba(244, 241, 234, 0.1);
+      border-top: 1px solid rgba(245, 242, 235, 0.1);
+      flex-wrap: wrap;
     }
-
     .hero-stat h3 {
       font-family: var(--font-serif);
       font-size: 1.8rem;
@@ -390,21 +425,60 @@
       color: var(--gold-light);
       margin-bottom: 4px;
     }
-
     .hero-stat p {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--white-dim);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       margin: 0;
     }
 
-    /* ---------- Fleet Section ---------- */
+    /* ============================================================
+       TRUST STRIP
+    ============================================================ */
+    .trust-strip {
+      background: var(--navy-light);
+      border-top: 1px solid rgba(245, 242, 235, 0.05);
+      border-bottom: 1px solid rgba(245, 242, 235, 0.05);
+      padding: 22px 0;
+    }
+    .trust-strip .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--white-dim);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .trust-item .check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       FLEET
+    ============================================================ */
     .fleet {
       padding: 100px 0;
       background: var(--navy-light);
     }
-
     .fleet-header {
       display: flex;
       align-items: flex-end;
@@ -413,50 +487,86 @@
       margin-bottom: 56px;
       flex-wrap: wrap;
     }
-
     .fleet-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
-
     .fleet-card {
       background: var(--navy);
-      border: 1px solid rgba(244, 241, 234, 0.06);
+      border: 1px solid rgba(245, 242, 235, 0.06);
       border-radius: var(--radius-lg);
       overflow: hidden;
       transition: var(--transition);
       cursor: pointer;
     }
-
     .fleet-card:hover {
       border-color: rgba(201, 168, 76, 0.3);
       transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.35);
     }
 
+    /* SVG-based fleet visual — always loads */
     .fleet-card-img {
       position: relative;
       height: 200px;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Unique gradient per card */
+    .fleet-card:nth-child(1) .fleet-card-img {
+      background:
+        radial-gradient(ellipse at 70% 40%, rgba(80, 160, 200, 0.25) 0%, transparent 60%),
+        linear-gradient(135deg, #1c3a5c 0%, #0a111f 100%);
+    }
+    .fleet-card:nth-child(2) .fleet-card-img {
+      background:
+        radial-gradient(ellipse at 70% 40%, rgba(140, 100, 200, 0.25) 0%, transparent 60%),
+        linear-gradient(135deg, #2a2350 0%, #0a111f 100%);
+    }
+    .fleet-card:nth-child(3) .fleet-card-img {
+      background:
+        radial-gradient(ellipse at 70% 40%, rgba(201, 168, 76, 0.28) 0%, transparent 60%),
+        linear-gradient(135deg, #3a2a15 0%, #0a111f 100%);
+    }
+    .fleet-card:nth-child(4) .fleet-card-img {
+      background:
+        radial-gradient(ellipse at 70% 40%, rgba(230, 200, 120, 0.3) 0%, transparent 60%),
+        linear-gradient(135deg, #1a1a1a 0%, #0a111f 100%);
     }
 
-    .fleet-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .fleet-jet-svg {
+      width: 68%;
+      height: auto;
+      color: rgba(245, 242, 235, 0.9);
+      filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5));
       transition: transform 0.6s ease;
     }
-
-    .fleet-card:hover .fleet-card-img img {
-      transform: scale(1.06);
+    .fleet-card:hover .fleet-jet-svg {
+      transform: translateX(8px) scale(1.04);
     }
 
+    /* Grid overlay */
+    .fleet-card-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245, 242, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245, 242, 235, 0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
+
+    /* Bottom fade */
     .fleet-card-img::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(11, 19, 32, 0.85) 100%);
+      background: linear-gradient(180deg, transparent 55%, rgba(10, 17, 31, 0.9) 100%);
+      pointer-events: none;
     }
 
     .fleet-card-tag {
@@ -466,93 +576,75 @@
       z-index: 2;
       padding: 6px 14px;
       border-radius: 20px;
-      background: rgba(11, 19, 32, 0.7);
+      background: rgba(10, 17, 31, 0.7);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(201, 168, 76, 0.25);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold-light);
     }
-
-    .fleet-card-body {
-      padding: 24px;
-    }
-
+    .fleet-card-body { padding: 24px; }
     .fleet-card-body h3 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--white);
       margin-bottom: 8px;
     }
-
     .fleet-card-body p {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--white-dim);
-      line-height: 1.6;
+      line-height: 1.65;
       margin-bottom: 16px;
     }
-
     .fleet-specs {
       display: flex;
       gap: 20px;
       padding-top: 16px;
-      border-top: 1px solid rgba(244, 241, 234, 0.06);
+      border-top: 1px solid rgba(245, 242, 235, 0.06);
     }
-
-    .fleet-spec {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
+    .fleet-spec { display: flex; flex-direction: column; gap: 2px; }
     .fleet-spec .value {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--gold-light);
     }
-
     .fleet-spec .label {
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       color: var(--gray);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
     }
 
-    /* ---------- Services ---------- */
+    /* ============================================================
+       SERVICES
+    ============================================================ */
     .services {
       padding: 100px 0;
       background: var(--navy);
     }
-
     .services-header {
       text-align: center;
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto 64px;
     }
-
-    .services-header .section-subtitle {
-      margin: 0 auto;
-    }
-
+    .services-header .section-subtitle { margin: 0 auto; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
-
     .service-card {
-      padding: 40px 32px;
+      padding: 38px 30px;
       background: var(--navy-light);
-      border: 1px solid rgba(244, 241, 234, 0.06);
+      border: 1px solid rgba(245, 242, 235, 0.06);
       border-radius: var(--radius-lg);
       transition: var(--transition);
       position: relative;
       overflow: hidden;
     }
-
     .service-card::before {
       content: '';
       position: absolute;
@@ -564,16 +656,11 @@
       opacity: 0;
       transition: var(--transition);
     }
-
     .service-card:hover {
       border-color: rgba(201, 168, 76, 0.2);
       transform: translateY(-4px);
     }
-
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
+    .service-card:hover::before { opacity: 1; }
     .service-icon {
       width: 52px;
       height: 52px;
@@ -582,66 +669,58 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
-      font-size: 1.4rem;
+      margin-bottom: 22px;
+      font-size: 1.35rem;
     }
-
     .service-card h3 {
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--white);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-
     .service-card p {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--white-dim);
       line-height: 1.7;
     }
 
-    /* ---------- Destinations / Global Reach ---------- */
+    /* ============================================================
+       DESTINATIONS
+    ============================================================ */
     .destinations {
       padding: 100px 0;
       background: var(--navy-light);
       overflow: hidden;
     }
-
     .destinations-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: center;
     }
-
-    .destinations-content .section-subtitle {
-      margin-bottom: 32px;
-    }
-
+    .destinations-content .section-subtitle { margin-bottom: 32px; }
     .destinations-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 14px;
     }
-
     .destination-item {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 14px 18px;
       background: var(--navy);
-      border: 1px solid rgba(244, 241, 234, 0.06);
+      border: 1px solid rgba(245, 242, 235, 0.06);
       border-radius: var(--radius);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--white-dim);
       transition: var(--transition);
     }
-
     .destination-item:hover {
       border-color: rgba(201, 168, 76, 0.25);
       color: var(--white);
     }
-
     .destination-item .city-dot {
       width: 6px;
       height: 6px;
@@ -650,81 +729,70 @@
       flex-shrink: 0;
     }
 
+    /* SVG globe visual */
     .destinations-visual {
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
       aspect-ratio: 4 / 3;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(30, 60, 100, 0.6) 0%, rgba(10, 17, 31, 1) 70%),
+        linear-gradient(135deg, #0d1626, #0a111f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+    }
+    .globe-svg {
+      width: 78%;
+      height: auto;
+      color: var(--gold);
     }
 
-    .destinations-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.8;
-    }
-
-    .destinations-visual::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(11, 19, 32, 0.4) 0%, transparent 60%);
-    }
-
-    /* ---------- About Section ---------- */
+    /* ============================================================
+       ABOUT
+    ============================================================ */
     .about {
       padding: 100px 0;
       background: var(--navy);
     }
-
     .about-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: center;
     }
-
     .about-visual {
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
       aspect-ratio: 3 / 4;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(201, 168, 76, 0.12) 0%, transparent 60%),
+        linear-gradient(160deg, #18233a 0%, #0a111f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+    }
+    .cabin-svg {
+      width: 82%;
+      height: auto;
+      color: var(--gold);
     }
 
-    .about-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.85;
-    }
-
-    .about-visual::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(11, 19, 32, 0.7) 100%);
-    }
-
-    .about-content .section-subtitle {
-      margin-bottom: 28px;
-    }
-
+    .about-content .section-subtitle { margin-bottom: 28px; }
     .about-points {
       display: flex;
       flex-direction: column;
       gap: 20px;
       margin-top: 32px;
     }
-
-    .about-point {
-      display: flex;
-      gap: 16px;
-    }
-
+    .about-point { display: flex; gap: 16px; }
     .about-point-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       background: var(--gold-soft);
       display: flex;
       align-items: center;
@@ -732,28 +800,91 @@
       flex-shrink: 0;
       font-size: 1.1rem;
     }
-
     .about-point h4 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--white);
       margin-bottom: 4px;
     }
-
     .about-point p {
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       color: var(--white-dim);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* ---------- CTA / Contact ---------- */
-    .cta-section {
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials {
       padding: 100px 0;
       background: var(--navy-light);
+    }
+    .testimonials-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      padding: 30px 28px;
+      background: var(--navy);
+      border: 1px solid rgba(245, 242, 235, 0.06);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+    }
+    .testimonial-card:hover {
+      border-color: rgba(201, 168, 76, 0.2);
+      transform: translateY(-3px);
+    }
+    .testimonial-quote {
+      font-size: 0.86rem;
+      color: var(--white-dim);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .testimonial-author h4 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1px;
+    }
+    .testimonial-author p {
+      font-size: 0.7rem;
+      color: var(--gray);
+    }
+
+    /* ============================================================
+       CTA / CONTACT
+    ============================================================ */
+    .cta-section {
+      padding: 100px 0;
+      background: var(--navy);
       position: relative;
       overflow: hidden;
     }
-
     .cta-section::before {
       content: '';
       position: absolute;
@@ -762,10 +893,9 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .cta-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -774,32 +904,26 @@
       position: relative;
       z-index: 1;
     }
-
-    .cta-content .section-title {
-      margin-bottom: 20px;
-    }
-
+    .cta-content .section-title { margin-bottom: 20px; }
     .cta-content p {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--white-dim);
       line-height: 1.8;
       margin-bottom: 32px;
     }
-
     .cta-contact-info {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
-
     .cta-contact-item {
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--white-dim);
+      transition: var(--transition);
     }
-
     .cta-contact-item .icon {
       width: 36px;
       height: 36px;
@@ -811,214 +935,288 @@
       font-size: 0.9rem;
       flex-shrink: 0;
     }
-
     .cta-contact-item a {
       color: var(--gold-light);
       transition: var(--transition);
     }
+    .cta-contact-item a:hover { color: var(--white); }
 
-    .cta-contact-item a:hover {
-      color: var(--white);
+    /* Prominent call button in contact */
+    .cta-call-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 28px;
+      margin-top: 24px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--gold) 0%, #b8963c 100%);
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: var(--transition);
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.25);
+    }
+    .cta-call-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(201, 168, 76, 0.4);
+    }
+    .cta-call-button svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
 
     .contact-form {
-      background: var(--navy);
-      padding: 40px;
+      background: var(--navy-light);
+      padding: 38px;
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(244, 241, 234, 0.06);
+      border: 1px solid rgba(245, 242, 235, 0.06);
     }
-
     .contact-form h3 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--white);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-
     .contact-form .form-sub {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--white-dim);
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
-
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-bottom: 16px;
     }
-
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
     .form-group label {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--white-dim);
     }
-
     .form-group input,
     .form-group textarea,
     .form-group select {
       padding: 12px 16px;
-      background: var(--navy-light);
-      border: 1px solid rgba(244, 241, 234, 0.08);
+      background: var(--navy);
+      border: 1px solid rgba(245, 242, 235, 0.08);
       border-radius: 8px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--white);
       transition: var(--transition);
       width: 100%;
     }
-
     .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: var(--gray);
-    }
-
+    .form-group textarea::placeholder { color: var(--gray); }
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-      border-color: rgba(201, 168, 76, 0.4);
+      border-color: rgba(201, 168, 76, 0.45);
       box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.08);
     }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
+    .form-group textarea { resize: vertical; min-height: 100px; }
     .form-group select {
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b8b2a6' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23b9b3a7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 16px center;
       padding-right: 40px;
       cursor: pointer;
     }
+    .form-group select option { background: var(--navy); color: var(--white); }
+    .contact-form .btn { width: 100%; margin-top: 8px; }
 
-    .form-group select option {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .contact-form .btn {
-      width: 100%;
-      margin-top: 8px;
-    }
-
-    /* ---------- Footer ---------- */
+    /* ============================================================
+       FOOTER
+    ============================================================ */
     .footer {
       background: var(--navy);
-      border-top: 1px solid rgba(244, 241, 234, 0.06);
+      border-top: 1px solid rgba(245, 242, 235, 0.06);
       padding: 64px 0 32px;
     }
-
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 48px;
       margin-bottom: 48px;
     }
-
     .footer-brand .logo {
-      margin-bottom: 16px;
-      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
     }
-
     .footer-brand p {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--white-dim);
       line-height: 1.7;
       max-width: 280px;
     }
-
     .footer-col h4 {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-
-    .footer-col ul {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
+    .footer-col ul { display: flex; flex-direction: column; gap: 11px; }
     .footer-col ul li a {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--white-dim);
       transition: var(--transition);
     }
-
-    .footer-col ul li a:hover {
-      color: var(--white);
-    }
-
+    .footer-col ul li a:hover { color: var(--white); }
     .footer-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(244, 241, 234, 0.06);
+      padding-top: 30px;
+      border-top: 1px solid rgba(245, 242, 235, 0.06);
       flex-wrap: wrap;
     }
-
-    .footer-bottom p {
-      font-size: 0.75rem;
-      color: var(--gray);
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 12px;
-    }
-
+    .footer-bottom p { font-size: 0.72rem; color: var(--gray); }
+    .footer-socials { display: flex; gap: 12px; }
     .footer-socials a {
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1px solid rgba(244, 241, 234, 0.1);
+      border: 1px solid rgba(245, 242, 235, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       color: var(--white-dim);
       transition: var(--transition);
     }
-
     .footer-socials a:hover {
       border-color: var(--gold);
       color: var(--gold);
       background: var(--gold-soft);
     }
 
-    /* ---------- Responsive ---------- */
+    /* ============================================================
+       FLOATING CLICK-TO-DIAL BUTTON
+    ============================================================ */
+    .call-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 950;
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      height: 62px;
+      padding: 0;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--gold) 0%, #b8963c 100%);
+      color: var(--navy);
+      box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45), 0 0 0 0 rgba(201, 168, 76, 0.6);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      overflow: hidden;
+      animation: callPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes callPulse {
+      0%, 100% {
+        box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45), 0 0 0 0 rgba(201, 168, 76, 0.6);
+      }
+      50% {
+        box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45), 0 0 0 14px rgba(201, 168, 76, 0);
+      }
+    }
+
+    .call-float-icon {
+      width: 62px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .call-float-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--navy);
+      animation: phoneRing 3s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes phoneRing {
+      0%, 85%, 100% { transform: rotate(0deg); }
+      87% { transform: rotate(-12deg); }
+      89% { transform: rotate(12deg); }
+      91% { transform: rotate(-10deg); }
+      93% { transform: rotate(10deg); }
+      95% { transform: rotate(0deg); }
+    }
+
+    .call-float-label {
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: max-width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  padding 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      padding: 0;
+    }
+
+    .call-float:hover {
+      animation: none;
+      box-shadow: 0 12px 36px rgba(201, 168, 76, 0.55);
+      transform: translateY(-3px);
+    }
+    .call-float:hover .call-float-label {
+      max-width: 220px;
+      padding: 0 24px 0 6px;
+    }
+
+    /* Mobile: always show label */
+    @media (max-width: 640px) {
+      .call-float {
+        bottom: 20px;
+        right: 16px;
+      }
+      .call-float-label {
+        max-width: 130px;
+        padding: 0 20px 0 4px;
+        font-size: 0.72rem;
+      }
+      .call-float-icon {
+        width: 54px;
+        height: 54px;
+      }
+      .call-float-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+      .call-float {
+        height: 54px;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
     @media (max-width: 1024px) {
       .destinations-inner,
       .about-inner,
-      .cta-inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .about-visual {
-        aspect-ratio: 16 / 9;
-        order: -1;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .cta-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual { aspect-ratio: 16 / 9; order: -1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-jet { width: 80%; top: 12%; right: -20%; opacity: 0.7; }
     }
 
     @media (max-width: 768px) {
@@ -1035,105 +1233,45 @@
         transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         z-index: 999;
       }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1.05rem; }
+      .hamburger { display: flex; }
+      .nav-cta .btn-ghost { display: none; }
+      .nav-call span { display: none; }
+      .nav-call { padding: 10px 12px; }
 
-      .nav-links.open {
-        right: 0;
-      }
+      .hero-stats { gap: 28px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
 
-      .nav-links a {
-        font-size: 1.1rem;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-cta .btn-ghost {
-        display: none;
-      }
-
-      .hero-stats {
-        gap: 28px;
-        flex-wrap: wrap;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .fleet-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .destinations-list {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .contact-form {
-        padding: 24px;
-      }
+      .fleet-header { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .destinations-list { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .contact-form { padding: 24px; }
+      .trust-strip .container { justify-content: center; gap: 16px 24px; }
     }
 
     @media (max-width: 480px) {
-      .container {
-        padding: 0 16px;
-      }
-
-      .hero .container {
-        padding-top: 100px;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-stats {
-        gap: 20px;
-      }
-
-      .hero-stat h3 {
-        font-size: 1.4rem;
-      }
-
-      .fleet-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+      .container { padding: 0 16px; }
+      .hero .container { padding-top: 105px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { gap: 20px; }
+      .hero-stat h3 { font-size: 1.35rem; }
+      .fleet-grid,
+      .services-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
   <header class="navbar" id="navbar">
     <div class="container">
-      <a href="#home" class="logo">
-        AEOLUS <span>JET</span>
-      </a>
+      <a href="#home" class="logo">AEOLUS <span>JET</span></a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#home">Home</a>
@@ -1141,76 +1279,109 @@
         <a href="#services">Services</a>
         <a href="#destinations">Destinations</a>
         <a href="#about">About</a>
+        <a href="#testimonials">Clients</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav-cta">
+        <a href="tel:+6560000000" class="nav-call" aria-label="Call Aeolus Jet now">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/>
+          </svg>
+          <span>+65 6000 0000</span>
+        </a>
         <a href="#contact" class="btn btn-ghost">Request a Flight</a>
         <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
   <section class="hero" id="home">
-    <div class="hero-bg">
-      <img
-        src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-        alt="Private jet on tarmac at dusk"
-        loading="eager"
+    <div class="hero-bg"></div>
+
+    <!-- Decorative jet silhouette (inline SVG - always loads) -->
+    <svg class="hero-jet" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M12 100 L90 92 L140 92 L230 20 L268 20 L182 92 L340 92 Q380 92 380 100 Q380 108 340 108 L182 108 L268 180 L230 180 L140 108 L90 108 L12 100 Z"
       />
+    </svg>
+
+    <div class="hero-trails" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span>
-          Bespoke Private Aviation
+          Private &amp; Commercial Air Charter
         </div>
 
         <h1>
-          Elevate Your Journey.<br />
-          <em>Redefine Luxury.</em>
+          Connecting the World<br />
+          <em>Without Compromise.</em>
         </h1>
 
         <p>
-          Aeolus Jet delivers seamless private jet charter and aircraft
-          chartering solutions from Singapore to the world. Experience
-          uncompromising safety, discretion, and personalised service at
-          40,000 feet.
+          From private jet charter and urgent cargo to ACMI leasing and
+          special missions — Aeolus Jet delivers comprehensive aviation
+          solutions from Singapore to destinations worldwide. Safety,
+          discretion, and precision on every flight.
         </p>
 
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">
-            Request a Flight
+            Request a Charter
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#fleet" class="btn btn-outline">Explore Fleet</a>
+          <a href="tel:+6560000000" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Call Us Now
+          </a>
         </div>
 
         <div class="hero-stats">
           <div class="hero-stat">
+            <h3>50k+</h3>
+            <p>Flight Hours</p>
+          </div>
+          <div class="hero-stat">
             <h3>150+</h3>
-            <p>Global Destinations</p>
+            <p>Destinations</p>
           </div>
           <div class="hero-stat">
             <h3>24/7</h3>
-            <p>Concierge Support</p>
-          </div>
-          <div class="hero-stat">
-            <h3>100%</h3>
-            <p>Safety Record</p>
+            <p>Ops Support</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FLEET ========== -->
+  <!-- ============================================================
+       TRUST STRIP
+  ============================================================ -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-item"><span class="check">✓</span> ARGUS &amp; Wyvern-Rated Operators</div>
+      <div class="trust-item"><span class="check">✓</span> 24/7 Flight Following</div>
+      <div class="trust-item"><span class="check">✓</span> Global Charter Network</div>
+      <div class="trust-item"><span class="check">✓</span> Transparent Pricing</div>
+      <div class="trust-item"><span class="check">✓</span> Singapore HQ · Worldwide Reach</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLEET
+  ============================================================ -->
   <section class="fleet" id="fleet">
     <div class="container">
       <div class="fleet-header">
@@ -1221,20 +1392,18 @@
         <p class="section-subtitle">
           From nimble light jets for regional hops to ultra-long-range
           flagships for intercontinental travel — we source the perfect
-          aircraft for your journey.
+          aircraft for your journey, whether passenger or cargo.
         </p>
       </div>
 
       <div class="fleet-grid">
-        <!-- Card 1 -->
+        <!-- Card 1 — Light Jet -->
         <article class="fleet-card">
           <div class="fleet-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1583500178450-e59e4309b57a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Light jet on runway"
-              loading="lazy"
-            />
             <span class="fleet-card-tag">Light Jet</span>
+            <svg class="fleet-jet-svg" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="currentColor" d="M8 50 L55 44 L80 44 L130 8 L148 8 L108 44 L195 44 Q225 44 225 50 Q225 56 195 56 L108 56 L148 92 L130 92 L80 56 L55 56 Z"/>
+            </svg>
           </div>
           <div class="fleet-card-body">
             <h3>Citation CJ Series</h3>
@@ -1243,31 +1412,20 @@
               access to smaller airports. Perfect for 4–6 passengers.
             </p>
             <div class="fleet-specs">
-              <div class="fleet-spec">
-                <span class="value">6</span>
-                <span class="label">Passengers</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">1,500 nm</span>
-                <span class="label">Range</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">400 ktas</span>
-                <span class="label">Speed</span>
-              </div>
+              <div class="fleet-spec"><span class="value">6</span><span class="label">Passengers</span></div>
+              <div class="fleet-spec"><span class="value">1,500 nm</span><span class="label">Range</span></div>
+              <div class="fleet-spec"><span class="value">400 ktas</span><span class="label">Speed</span></div>
             </div>
           </div>
         </article>
 
-        <!-- Card 2 -->
+        <!-- Card 2 — Midsize Jet -->
         <article class="fleet-card">
           <div class="fleet-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1615885116056-9b2b6b6b6b6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Midsize private jet"
-              loading="lazy"
-            />
             <span class="fleet-card-tag">Midsize Jet</span>
+            <svg class="fleet-jet-svg" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="currentColor" d="M8 50 L55 44 L80 44 L130 8 L148 8 L108 44 L195 44 Q225 44 225 50 Q225 56 195 56 L108 56 L148 92 L130 92 L80 56 L55 56 Z"/>
+            </svg>
           </div>
           <div class="fleet-card-body">
             <h3>Hawker 800XP</h3>
@@ -1276,84 +1434,54 @@
               transcontinental travel with 7–8 passengers.
             </p>
             <div class="fleet-specs">
-              <div class="fleet-spec">
-                <span class="value">8</span>
-                <span class="label">Passengers</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">2,540 nm</span>
-                <span class="label">Range</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">448 ktas</span>
-                <span class="label">Speed</span>
-              </div>
+              <div class="fleet-spec"><span class="value">8</span><span class="label">Passengers</span></div>
+              <div class="fleet-spec"><span class="value">2,540 nm</span><span class="label">Range</span></div>
+              <div class="fleet-spec"><span class="value">448 ktas</span><span class="label">Speed</span></div>
             </div>
           </div>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 3 — Heavy Jet -->
         <article class="fleet-card">
           <div class="fleet-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1583500178450-e59e4309b57a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Heavy jet exterior"
-              loading="lazy"
-            />
             <span class="fleet-card-tag">Heavy Jet</span>
+            <svg class="fleet-jet-svg" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="currentColor" d="M8 50 L55 44 L80 44 L130 8 L148 8 L108 44 L195 44 Q225 44 225 50 Q225 56 195 56 L108 56 L148 92 L130 92 L80 56 L55 56 Z"/>
+            </svg>
           </div>
           <div class="fleet-card-body">
             <h3>Gulfstream G450</h3>
             <p>
-              Large-cabin luxury with divided seating zones, full galley, and
-              intercontinental range. For 9–14 passengers.
+              Large-cabin luxury with divided seating zones, full galley,
+              and intercontinental range. For 9–14 passengers.
             </p>
             <div class="fleet-specs">
-              <div class="fleet-spec">
-                <span class="value">14</span>
-                <span class="label">Passengers</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">4,350 nm</span>
-                <span class="label">Range</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">459 ktas</span>
-                <span class="label">Speed</span>
-              </div>
+              <div class="fleet-spec"><span class="value">14</span><span class="label">Passengers</span></div>
+              <div class="fleet-spec"><span class="value">4,350 nm</span><span class="label">Range</span></div>
+              <div class="fleet-spec"><span class="value">459 ktas</span><span class="label">Speed</span></div>
             </div>
           </div>
         </article>
 
-        <!-- Card 4 -->
+        <!-- Card 4 — Ultra Long-Range -->
         <article class="fleet-card">
           <div class="fleet-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Ultra long range jet"
-              loading="lazy"
-            />
             <span class="fleet-card-tag">Ultra Long-Range</span>
+            <svg class="fleet-jet-svg" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="currentColor" d="M8 50 L55 44 L80 44 L130 8 L148 8 L108 44 L195 44 Q225 44 225 50 Q225 56 195 56 L108 56 L148 92 L130 92 L80 56 L55 56 Z"/>
+            </svg>
           </div>
           <div class="fleet-card-body">
             <h3>Bombardier Global 7500</h3>
             <p>
-              The pinnacle of private aviation. Four living spaces, a private
-              stateroom, and unrivaled range for up to 16 passengers.
+              The pinnacle of private aviation. Four living spaces, a
+              private stateroom, and unrivaled range for up to 16
+              passengers.
             </p>
             <div class="fleet-specs">
-              <div class="fleet-spec">
-                <span class="value">16</span>
-                <span class="label">Passengers</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">7,700 nm</span>
-                <span class="label">Range</span>
-              </div>
-              <div class="fleet-spec">
-                <span class="value">488 ktas</span>
-                <span class="label">Speed</span>
-              </div>
+              <div class="fleet-spec"><span class="value">16</span><span class="label">Passengers</span></div>
+              <div class="fleet-spec"><span class="value">7,700 nm</span><span class="label">Range</span></div>
+              <div class="fleet-spec"><span class="value">488 ktas</span><span class="label">Speed</span></div>
             </div>
           </div>
         </article>
@@ -1361,15 +1489,18 @@
     </div>
   </section>
 
-  <!-- ========== SERVICES ========== -->
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
   <section class="services" id="services">
     <div class="container">
       <div class="services-header">
         <span class="section-label">What We Offer</span>
         <h2 class="section-title">Tailored Aviation Solutions</h2>
         <p class="section-subtitle">
-          Whether for business, leisure, or special missions, Aeolus Jet
-          provides end-to-end charter services designed around your needs.
+          Whether for business, leisure, cargo, or special missions,
+          Aeolus Jet provides end-to-end charter services designed around
+          your operational needs.
         </p>
       </div>
 
@@ -1379,65 +1510,67 @@
           <h3>Private Jet Charter</h3>
           <p>
             On-demand private jet charter for individuals and families.
-            Choose from a global network of verified aircraft and
-            experience seamless door-to-door travel.
+            Choose from a global network of verified aircraft and experience
+            seamless door-to-door travel with complete discretion.
           </p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">💼</div>
-          <h3>Corporate Travel</h3>
+          <h3>Commercial &amp; Group Charter</h3>
           <p>
-            Efficient, discreet, and flexible air travel for executives and
-            teams. Optimise your schedule with dedicated account management
-            and priority access.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">👥</div>
-          <h3>Group Charter</h3>
-          <p>
-            From sports teams to corporate retreats, we arrange spacious
-            aircraft with custom configurations to keep your group together
-            and on time.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🛎️</div>
-          <h3>Concierge & Support</h3>
-          <p>
-            Our 24/7 concierge team handles everything from ground
-            transportation and catering to last-minute itinerary changes —
-            so you can focus on what matters.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🚑</div>
-          <h3>Medical & Special Missions</h3>
-          <p>
-            Time-critical medical evacuation and specialised charter
-            solutions, coordinated with experienced operators and medical
-            teams.
+            Efficient, flexible air travel for executives, teams, and
+            groups. Optimise your schedule with dedicated account
+            management and priority access to commercial aircraft.
           </p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">📦</div>
-          <h3>Cargo & Freight</h3>
+          <h3>Urgent Cargo &amp; Freight</h3>
           <p>
-            Urgent freight and outsize cargo charter services, backed by our
-            sister division's logistics expertise and global carrier
-            network.
+            Time-critical cargo charter for oversized, over-length, and
+            dangerous goods shipments. Humanitarian aid, remote destination
+            access, and onboard courier services available.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>ACMI Leasing</h3>
+          <p>
+            Aircraft, Crew, Maintenance, and Insurance leasing solutions
+            for airlines, tour operators, and corporate clients who need
+            reliable capacity — fast and flexibly.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚑</div>
+          <h3>Medical &amp; Special Missions</h3>
+          <p>
+            Time-critical medical evacuation and specialised charter
+            solutions, coordinated with experienced operators and medical
+            teams for the highest standard of care.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛎️</div>
+          <h3>Concierge &amp; Flight Support</h3>
+          <p>
+            Our 24/7 team handles everything from ground transportation and
+            catering to last-minute itinerary changes and overflight
+            permits — so you can focus on what matters.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== DESTINATIONS ========== -->
+  <!-- ============================================================
+       DESTINATIONS
+  ============================================================ -->
   <section class="destinations" id="destinations">
     <div class="container">
       <div class="destinations-inner">
@@ -1446,8 +1579,8 @@
           <h2 class="section-title">From Singapore<br />to the World</h2>
           <p class="section-subtitle">
             Headquartered in Singapore, Aeolus Jet connects you to key
-            business and leisure destinations across Asia, Europe, the
-            Middle East, and beyond.
+            business, leisure, and cargo destinations across Asia, Europe,
+            the Middle East, Africa, and beyond.
           </p>
 
           <div class="destinations-list">
@@ -1461,30 +1594,112 @@
             <div class="destination-item"><span class="city-dot"></span> New York (TEB)</div>
             <div class="destination-item"><span class="city-dot"></span> Los Angeles (VNY)</div>
             <div class="destination-item"><span class="city-dot"></span> Maldives (MLE)</div>
+            <div class="destination-item"><span class="city-dot"></span> Sharm El Sheikh (SSH)</div>
+            <div class="destination-item"><span class="city-dot"></span> Hurghada (HRG)</div>
           </div>
         </div>
 
+        <!-- Inline SVG globe — always loads -->
         <div class="destinations-visual">
-          <img
-            src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Singapore skyline at dusk"
-            loading="lazy"
-          />
+          <svg class="globe-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="globeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(201,168,76,0.25)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+            </defs>
+            <circle cx="200" cy="200" r="180" fill="url(#globeGlow)"/>
+            <!-- Globe outline -->
+            <circle cx="200" cy="200" r="140" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+            <!-- Latitudes -->
+            <ellipse cx="200" cy="200" rx="140" ry="50" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <ellipse cx="200" cy="200" rx="140" ry="100" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <ellipse cx="200" cy="200" rx="140" ry="135" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="60" y1="200" x2="340" y2="200" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <!-- Longitudes -->
+            <ellipse cx="200" cy="200" rx="50" ry="140" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <ellipse cx="200" cy="200" rx="100" ry="140" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="200" y1="60" x2="200" y2="340" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <!-- City dots -->
+            <g fill="currentColor">
+              <circle cx="290" cy="220" r="5"/>
+              <circle cx="260" cy="195" r="3.5"/>
+              <circle cx="300" cy="185" r="3.5"/>
+              <circle cx="215" cy="200" r="3.5"/>
+              <circle cx="190" cy="170" r="3.5"/>
+              <circle cx="205" cy="175" r="3.5"/>
+              <circle cx="315" cy="245" r="3.5"/>
+              <circle cx="120" cy="190" r="3.5"/>
+              <circle cx="140" cy="200" r="3.5"/>
+              <circle cx="235" cy="245" r="3.5"/>
+            </g>
+            <!-- Flight arcs from SIN -->
+            <g fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6">
+              <path d="M290 220 Q380 180 315 245"/>
+              <path d="M290 220 Q350 150 300 185"/>
+              <path d="M290 220 Q200 100 120 190"/>
+              <path d="M290 220 Q150 320 140 200"/>
+            </g>
+            <!-- Singapore marker (pulsing) -->
+            <circle cx="290" cy="220" r="12" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5">
+              <animate attributeName="r" values="5;14;5" dur="2.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-inner">
+        <!-- Inline SVG cabin illustration — always loads -->
         <div class="about-visual">
-          <img
-            src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Private jet cabin interior"
-            loading="lazy"
-          />
+          <svg class="cabin-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="cabinFuselage" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(201,168,76,0.18)"/>
+                <stop offset="100%" stop-color="rgba(201,168,76,0.04)"/>
+              </linearGradient>
+              <linearGradient id="windowGlow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(224,200,120,0.9)"/>
+                <stop offset="100%" stop-color="rgba(201,168,76,0.3)"/>
+              </linearGradient>
+            </defs>
+            <!-- Fuselage outline -->
+            <path d="M30 20 Q15 200 30 380 L270 380 Q285 200 270 20 Z"
+                  fill="url(#cabinFuselage)" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+            <!-- Cabin windows -->
+            <g>
+              <rect x="65" y="70" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="130" y="70" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="195" y="70" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="65" y="130" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="130" y="130" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="195" y="130" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="65" y="190" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="130" y="190" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="195" y="190" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="65" y="250" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="130" y="250" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+              <rect x="195" y="250" width="42" height="26" rx="13" fill="url(#windowGlow)"/>
+            </g>
+            <!-- Aisle line -->
+            <line x1="150" y1="20" x2="150" y2="380" stroke="currentColor" stroke-width="0.8" opacity="0.25" stroke-dasharray="4 6"/>
+            <!-- Stars outside windows -->
+            <g fill="currentColor" opacity="0.7">
+              <circle cx="76" cy="80" r="1"/>
+              <circle cx="92" cy="86" r="0.8"/>
+              <circle cx="142" cy="82" r="1"/>
+              <circle cx="160" cy="88" r="0.8"/>
+              <circle cx="208" cy="80" r="1"/>
+              <circle cx="228" cy="86" r="0.8"/>
+            </g>
+          </svg>
         </div>
 
         <div class="about-content">
@@ -1492,9 +1707,9 @@
           <h2 class="section-title">Aviation Excellence,<br />Without Compromise</h2>
           <p class="section-subtitle">
             Aeolus Jet was founded with a singular vision: to make private
-            aviation effortless, transparent, and exceptionally safe. Based
-            in Singapore, we combine deep regional expertise with a global
-            operator network.
+            and commercial aviation effortless, transparent, and
+            exceptionally safe. Based in Singapore, we combine deep regional
+            expertise with a global operator network.
           </p>
 
           <div class="about-points">
@@ -1539,7 +1754,69 @@
     </div>
   </section>
 
-  <!-- ========== CTA / CONTACT ========== -->
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <span class="section-label">Client Feedback</span>
+        <h2 class="section-title">Trusted by Clients Worldwide</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “We thank you for all your cooperation — everything went smooth
+            and all promises were fulfilled. We highly appreciate this.”
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">C</div>
+            <div><h4>Crina</h4><p>Charter Client</p></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Thank you so much guys — we had a great flight, very
+            professional staff and pilots, very modern airplane and well
+            equipped. Will definitely fly again with you.”
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div><h4>Rosalia</h4><p>Private Charter Client</p></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “We would like to thank the team for trusting Garuda Indonesia
+            and for the amazing collaboration, communication, and help
+            making this charter go well.”
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">F</div>
+            <div><h4>Feb</h4><p>Airline Partner</p></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Thank you so much for a very nice and professional operation.
+            Amazing job.”
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div><h4>Maan</h4><p>Commercial Charter Client</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA / CONTACT
+  ============================================================ -->
   <section class="cta-section" id="contact">
     <div class="container">
       <div class="cta-inner">
@@ -1547,16 +1824,20 @@
           <span class="section-label">Get in Touch</span>
           <h2 class="section-title">Ready to Fly<br />on Your Terms?</h2>
           <p>
-            Share your itinerary and our charter specialists will respond
-            within hours with a tailored solution and transparent pricing.
-            No obligation, no hidden fees — just expert advice.
+            Share your itinerary — passenger, cargo, or special mission —
+            and our charter specialists will respond within hours with a
+            tailored solution and transparent pricing. No obligation, no
+            hidden fees — just expert advice.
           </p>
 
-          <div class="cta-contact-info">
-            <div class="cta-contact-item">
-              <div class="icon">📞</div>
-              <a href="tel:+6560000000">+65 6000 0000</a>
-            </div>
+          <a href="tel:+6560000000" class="cta-call-button" aria-label="Call Aeolus Jet now">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/>
+            </svg>
+            Call Us Now — +65 6000 0000
+          </a>
+
+          <div class="cta-contact-info" style="margin-top: 32px;">
             <div class="cta-contact-item">
               <div class="icon">✉️</div>
               <a href="mailto:charter@aeolusjet.com">charter@aeolusjet.com</a>
@@ -1569,7 +1850,7 @@
         </div>
 
         <form class="contact-form" id="charterForm" novalidate>
-          <h3>Request a Flight</h3>
+          <h3>Request a Charter</h3>
           <p class="form-sub">Tell us about your journey and we'll be in touch.</p>
 
           <div class="form-row">
@@ -1600,19 +1881,20 @@
               <input type="date" id="date" name="date" required />
             </div>
             <div class="form-group">
-              <label for="passengers">Passengers</label>
-              <select id="passengers" name="passengers">
-                <option value="1-4">1–4</option>
-                <option value="5-8">5–8</option>
-                <option value="9-14">9–14</option>
-                <option value="15+">15+</option>
+              <label for="serviceType">Service Type</label>
+              <select id="serviceType" name="serviceType">
+                <option value="private">Private Jet Charter</option>
+                <option value="group">Group / Commercial Charter</option>
+                <option value="cargo">Cargo &amp; Freight</option>
+                <option value="acmi">ACMI Leasing</option>
+                <option value="medical">Medical / Special Mission</option>
               </select>
             </div>
           </div>
 
           <div class="form-group" style="margin-bottom: 20px;">
             <label for="message">Additional Details</label>
-            <textarea id="message" name="message" placeholder="Aircraft preference, special requests, return date…"></textarea>
+            <textarea id="message" name="message" placeholder="Aircraft preference, cargo dimensions, special requests, return date…"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit Request</button>
@@ -1621,16 +1903,18 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#home" class="logo">AEOLUS <span>JET</span></a>
           <p>
-            Bespoke private jet charter and aircraft chartering from
-            Singapore. Elevating journeys with safety, discretion, and
-            uncompromising service.
+            Private jet charter, commercial air charter, urgent cargo, and
+            specialised aviation solutions from Singapore. Connecting the
+            world with flights — safely, discreetly, and without compromise.
           </p>
         </div>
 
@@ -1647,10 +1931,11 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#services">Private Charter</a></li>
-            <li><a href="#services">Corporate Travel</a></li>
-            <li><a href="#services">Group Charter</a></li>
-            <li><a href="#services">Cargo & Freight</a></li>
+            <li><a href="#services">Private Jet Charter</a></li>
+            <li><a href="#services">Commercial Charter</a></li>
+            <li><a href="#services">Cargo &amp; Freight</a></li>
+            <li><a href="#services">ACMI Leasing</a></li>
+            <li><a href="#services">Medical Evacuation</a></li>
           </ul>
         </div>
 
@@ -1665,7 +1950,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2025 Aeolus Jet Pte. Ltd. All rights reserved. Co. Reg. No. 202508842G.</p>
+        <p>© 2026 Aeolus Jet Pte. Ltd. All rights reserved. Co. Reg. No. 202608842G.</p>
         <div class="footer-socials">
           <a href="#" aria-label="LinkedIn">in</a>
           <a href="#" aria-label="Instagram">ig</a>
@@ -1675,80 +1960,74 @@
     </div>
   </footer>
 
-  <!-- ========== JAVASCRIPT ========== -->
+  <!-- ============================================================
+       FLOATING CLICK-TO-DIAL BUTTON
+  ============================================================ -->
+  <a href="tel:+6560000000" class="call-float" aria-label="Call Aeolus Jet now at +65 6000 0000">
+    <span class="call-float-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/>
+      </svg>
+    </span>
+    <span class="call-float-label">Call Now</span>
+  </a>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
   <script>
     (function () {
       'use strict';
 
-      /* ---------- Navbar scroll effect ---------- */
-      const navbar = document.getElementById('navbar');
-
+      /* ---------- Navbar scroll ---------- */
+      var navbar = document.getElementById('navbar');
       function handleScroll() {
-        if (window.scrollY > 40) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
       }
-
       window.addEventListener('scroll', handleScroll, { passive: true });
       handleScroll();
 
-      /* ---------- Mobile menu toggle ---------- */
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
+      /* ---------- Mobile menu ---------- */
+      var hamburger = document.getElementById('hamburger');
+      var navLinks = document.getElementById('navLinks');
 
       function toggleMenu() {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('open');
         document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
       }
-
       hamburger.addEventListener('click', toggleMenu);
 
-      // Close menu when a link is clicked
       navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
-          if (navLinks.classList.contains('open')) {
-            toggleMenu();
-          }
+          if (navLinks.classList.contains('open')) toggleMenu();
         });
       });
 
-      // Close menu on Escape key
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-          toggleMenu();
-        }
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) toggleMenu();
       });
 
-      /* ---------- Smooth scroll for anchor links (fallback) ---------- */
+      /* ---------- Smooth anchor scroll ---------- */
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
           var targetId = this.getAttribute('href');
           if (targetId === '#') return;
-
           var target = document.querySelector(targetId);
           if (target) {
             e.preventDefault();
             var navHeight = navbar.offsetHeight;
-            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
-
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
+            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 14;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
           }
         });
       });
 
-      /* ---------- Form handling (demo) ---------- */
+      /* ---------- Form handling ---------- */
       var form = document.getElementById('charterForm');
-
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Simple validation
         var name = document.getElementById('name').value.trim();
         var email = document.getElementById('email').value.trim();
         var departure = document.getElementById('departure').value.trim();
@@ -1759,22 +2038,17 @@
           alert('Please complete all required fields before submitting.');
           return;
         }
-
-        // Basic email check
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           alert('Please enter a valid email address.');
           return;
         }
 
-        // Simulate successful submission
         var button = form.querySelector('button[type="submit"]');
         var originalText = button.textContent;
-
         button.textContent = 'Request Sent ✓';
         button.style.background = '#2d8a4e';
         button.disabled = true;
 
-        // Reset after 3 seconds
         setTimeout(function () {
           button.textContent = originalText;
           button.style.background = '';
@@ -1782,17 +2056,11 @@
           form.reset();
         }, 3000);
 
-        // In a real implementation, you would send the data to a server here.
         console.log('Charter request:', { name, email, departure, destination, date });
       });
 
-      /* ---------- Intersection Observer for subtle fade-in ---------- */
+      /* ---------- Fade-in observer ---------- */
       if ('IntersectionObserver' in window) {
-        var observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -40px 0px'
-        };
-
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
@@ -1801,15 +2069,13 @@
               observer.unobserve(entry.target);
             }
           });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-        var animateElements = document.querySelectorAll(
-          '.fleet-card, .service-card, .about-point, .destination-item'
-        );
-
-        animateElements.forEach(function (el) {
+        document.querySelectorAll(
+          '.fleet-card, .service-card, .about-point, .destination-item, .testimonial-card'
+        ).forEach(function (el) {
           el.style.opacity = '0';
-          el.style.transform = 'translateY(20px)';
+          el.style.transform = 'translateY(18px)';
           el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
           observer.observe(el);
         });
